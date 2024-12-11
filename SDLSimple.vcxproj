@@ -133,24 +133,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Effects.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="LevelA.cpp" />
     <ClCompile Include="LevelB.cpp" />
     <ClCompile Include="LevelC.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Mid.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="Start.cpp" />
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Effects.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="GlobalState.h" />
     <ClInclude Include="LevelA.h" />
     <ClInclude Include="LevelB.h" />
     <ClInclude Include="LevelC.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Mid.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Start.h" />

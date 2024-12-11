@@ -1,7 +1,10 @@
-﻿  Entity.cpp
-E:\source\repos\SDL HW5\Entity.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-E:\source\repos\SDL HW5\Entity.h(7,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
-E:\source\repos\SDL HW5\Entity.h(162,55): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
-  SDLSimple.vcxproj -> E:\source\repos\SDL HW5\Debug\SDLSimple.exe
+﻿  LevelC.cpp
+E:\source\repos\SDL_Final\Scene.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\source\repos\SDL_Final\Utility.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\source\repos\SDL_Final\Entity.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\source\repos\SDL_Final\Entity.h(9,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+E:\source\repos\SDL_Final\LevelC.cpp(252,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\source\repos\SDL_Final\LevelC.cpp(306,15): warning C4930: “glm::vec3 center_position(void)”: 未调用原型函数(是否是有意用变量定义的?)
+  SDLSimple.vcxproj -> E:\source\repos\SDL_Final\Debug\SDLSimple.exe
   'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
   或批处理文件。

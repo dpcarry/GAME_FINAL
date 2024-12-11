@@ -1,7 +1,7 @@
 #include "Start.h"
 #include "Utility.h"
 
-#define TITLE_TEXT "Milk Song"
+#define TITLE_TEXT "Path to Darkness"
 #define PROMPT_TEXT "Press ENTER to start"
 
 
@@ -13,6 +13,8 @@ Start::~Start() {
 
 void Start::initialise() {
     m_game_state.next_scene_id = -1;
+    m_game_state.level_number = 6;
+
     // 初始化背景音乐或其他元素
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
     m_game_state.bgm = Mix_LoadMUS("assets/start_screen_music.mp3");
@@ -60,7 +62,7 @@ void Start::render(ShaderProgram* program) {
     GLuint font_texture_id = Utility::load_texture("assets/font1.png");
 
     // 渲染标题和提示信息
-    Utility::draw_text(program, font_texture_id, TITLE_TEXT, 0.5f, -0.025f, glm::vec3(-2.0f, 2.0f, 0.0f));
-    Utility::draw_text(program, font_texture_id, PROMPT_TEXT, 0.4f, -0.02f, glm::vec3(-3.5f, 0.0f, 0.0f));
+    Utility::draw_text(program, font_texture_id, TITLE_TEXT, 0.45f, -0.015f, glm::vec3(-3.3f, 2.0f, 0.0f));
+    Utility::draw_text(program, font_texture_id, PROMPT_TEXT, 0.3f, -0.01f, glm::vec3(-3.0f, 0.0f, 0.0f));
 
 }

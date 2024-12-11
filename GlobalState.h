@@ -2,5 +2,5 @@
 #define GLOBAL_STATE_H
 
 extern int player_lives;
-
+extern int won;
 #endif

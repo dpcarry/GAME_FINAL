@@ -20,7 +20,7 @@ private:
     GLuint load_shader_from_file(const std::string &shader_file, GLenum shader_type);
 
     GLuint m_program_id;
-
+    GLuint m_is_c;
     GLuint m_projection_matrix_uniform;
     GLuint m_model_matrix_uniform;
     GLuint m_view_matrix_uniform;
@@ -36,9 +36,12 @@ public:
 
     void load(const char *vertex_shader_file, const char *fragment_shader_file);
 
+    GLuint m_light_position_uniform;
     void set_model_matrix(const glm::mat4 &matrix);
     void set_projection_matrix(const glm::mat4 &matrix);
+    void set_light_position_matrix(glm::vec3 position);
     void set_view_matrix(const glm::mat4 &matrix);
+    void set_is_c(const int is_c);
     void set_colour(float red, float green, float blue, float alpha);
     
     GLuint const get_program_id()               const { return m_program_id;          };

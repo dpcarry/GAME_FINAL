@@ -66,11 +66,15 @@ struct GameState
     Map* map;
     Entity* player;
     Entity* enemies;
-
+    Entity* projectiles;
     Mix_Music* bgm;
     Mix_Chunk* jump_sfx;
+    Mix_Chunk* win_sfx;
+    Mix_Chunk* punch_sfx;
+
 
     int next_scene_id;
+    int level_number;
 };
 
 class Scene {

@@ -8,7 +8,8 @@ void ShaderProgram::load(const char *vertex_shader_file, const char *fragment_sh
     m_vertex_shader   = load_shader_from_file(vertex_shader_file, GL_VERTEX_SHADER);
     // create the fragment shader
     m_fragment_shader = load_shader_from_file(fragment_shader_file, GL_FRAGMENT_SHADER);
-    
+    m_light_position_uniform = glGetUniformLocation(m_program_id, "lightPosition");
+
     // Create the final shader program from our vertex and fragment shaders
     m_program_id = glCreateProgram();
     glAttachShader(m_program_id, m_vertex_shader);
@@ -27,7 +28,7 @@ void ShaderProgram::load(const char *vertex_shader_file, const char *fragment_sh
     m_projection_matrix_uniform = glGetUniformLocation(m_program_id, "projectionMatrix");
     m_view_matrix_uniform       = glGetUniformLocation(m_program_id, "viewMatrix");
     m_colour_uniform            = glGetUniformLocation(m_program_id, "color");
-    
+    m_is_c = glGetUniformLocation(m_program_id, "is_c");
     m_position_attribute  = glGetAttribLocation(m_program_id, "position");
     m_tex_coord_attribute = glGetAttribLocation(m_program_id, "texCoord");
     
@@ -100,6 +101,12 @@ void ShaderProgram::set_view_matrix(const glm::mat4 &matrix)
     glUniformMatrix4fv(m_view_matrix_uniform, 1, GL_FALSE, &matrix[0][0]);
 }
 
+void ShaderProgram::set_is_c(const int is_c)
+{
+    glUseProgram(m_program_id);
+    glUniform1i(m_is_c, is_c);
+}
+
 void ShaderProgram::set_model_matrix(const glm::mat4 &matrix)
 {
     glUseProgram(m_program_id);
@@ -110,4 +117,10 @@ void ShaderProgram::set_projection_matrix(const glm::mat4 &matrix)
 {
     glUseProgram(m_program_id);
     glUniformMatrix4fv(m_projection_matrix_uniform, 1, GL_FALSE, &matrix[0][0]);
+}
+
+void ShaderProgram::set_light_position_matrix(glm::vec3 position)
+{
+    glUseProgram(m_program_id);
+    glUniform2f(m_light_position_uniform, position.x, position.y);
 }

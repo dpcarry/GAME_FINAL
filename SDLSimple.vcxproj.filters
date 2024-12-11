@@ -45,6 +45,12 @@
     <ClCompile Include="LevelC.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Effects.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Mid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ShaderProgram.h">
@@ -75,6 +81,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="GlobalState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Mid.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
